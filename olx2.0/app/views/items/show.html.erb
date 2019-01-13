@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <div style="width:400px; height: auto">
+    <%= image_tag(@item.image,style:'width: 100%') %>
+    <%= link_to @item.image.filename,rails_blob_path(@item.image,desposition:'attachment') %>
+
+  </div>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @item.price %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Phno:</strong>
+  <%= @item.phno %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @item.city %>
+</p>
+
+
+<%= link_to 'Back', items_path %>

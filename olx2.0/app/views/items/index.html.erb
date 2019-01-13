@@ -1,0 +1,183 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Name</th>
+      <th>Phno</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+     <%if !(item.user_id==current_user.id) %>
+      <tr>
+       <td><%= item.title %></td>
+        <td><%= item.description %></td>
+        <td><%= item.name %></td>
+        <td><%= item.phno %></td>
+        <td><%= item.city %></td>
+        <td><%= link_to 'Show', item %></td>
+
+      </tr><%end %>
+    <% end %>
+   <% @f.each do |yo| %>
+    <tr>
+      <td><%=yo.title %></td>
+      <td><%=yo.description%></td>
+      <td><%=yo.name%></td>
+      <td><%=yo.phno%></td>
+      <td><%=yo.city %></td>
+      <td><%= link_to 'show',yo%></td>
+      <td><%= link_to 'Edit', edit_item_path(yo) %></td>
+      <td><%= link_to 'Destroy', yo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_item_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
